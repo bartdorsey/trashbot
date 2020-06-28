@@ -1,8 +1,8 @@
 // Description:
-//   Prints a random pug to the channel
+//   Prints a random dog breed to the channel
 //
 // Commands:
-//   hubot pugme - Prints a random pug to the channel
+//   hubot dogme <breed> - Prints a random breed to the channel
 const fetch = require('node-fetch');
 
 module.exports = robot => {
