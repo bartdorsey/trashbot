@@ -1,3 +1,8 @@
+// Description:
+//   Prints a random pug to the channel
+//
+// Commands:
+//   hubot pugme - Prints a random pug to the channel
 const fetch = require('node-fetch');
 
 module.exports = robot => {
@@ -6,7 +11,6 @@ module.exports = robot => {
             const response = await fetch('https://dog.ceo/api/breed/pug/images/random');
             if (response.ok) {
                 const pug = await response.json();
-                console.log(pug);
                 if (pug.status === 'success') {
                     res.send(pug.message);
                 } else {
